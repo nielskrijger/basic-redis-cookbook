@@ -6,8 +6,8 @@ This Chef cookbook installs redis.
 This basic-redis cookbook has very limited configurability and likely you'll want to use
 the official redis cookbook for your deployments instead.
 
-Personally I find the community cookbooks too complicated; this cookbook is tailored to my personal
-needs.
+Personally I find the community cookbooks too complicated; this cookbook is tailored to meet
+my personal needs.
 
 # Running
 
