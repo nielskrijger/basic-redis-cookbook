@@ -9,7 +9,7 @@ the official redis cookbook for your deployments instead.
 Personally I find the community cookbooks too complicated; this cookbook is tailored to meet
 my personal needs.
 
-# Running
+# Getting started
 
 You need Kitchen CI (http://kitchen.ci/) to run a test VM.
 
@@ -24,10 +24,6 @@ To open a command line SSH connection, run the following:
 To test whether the install is working property execute:
 
     kitchen verify default-centos-65
-
-# Dependencies / contributions
-
-Based on https://github.com/miah/chef-redis
 
 # License
 
