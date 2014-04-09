@@ -1,0 +1,8 @@
+description "redis server"
+
+start on runlevel [23]
+stop on shutdown
+
+respawn
+
+exec sudo -u <%= node['redis']['user'] %> /usr/local/bin/redis-server <%= node['redis']['conf_file'] %>

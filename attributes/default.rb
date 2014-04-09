@@ -1,0 +1,25 @@
+default['redis']['conf_dir'] = '/etc/redis'
+default['redis']['conf_file'] = "#{node['redis']['conf_dir']}/redis.conf"
+default['redis']['homedir'] = '/var/lib/redis'
+default['redis']['user'] = 'redis'
+default['redis']['uid'] = nil # set to nil to let system pick
+default['redis']['group'] = 'redis'
+default['redis']['gid'] = nil # set to nil to let system pick
+default['redis']['version'] = '2.8.8'
+default['redis']['url'] = "http://download.redis.io/releases/redis-#{node['redis']['version']}.tar.gz"
+
+default['redis']['conf']['port'] = 6379
+default['redis']['conf']['timeout'] = 0 # Close the connection after a client is idle for N seconds (0 to disable)
+default['redis']['conf']['loglevel'] = 'notice' # Either verbose, debug, notice or warning
+default['redis']['conf']['logfile'] = '/var/log/redis/redis-server.log'
+default['redis']['conf']['syslog-enabled'] = 'no' # Either 'no' or 'yes'
+default['redis']['conf']['syslog-identity'] = 'redis'
+default['redis']['conf']['syslog-facility'] = 'local0'
+default['redis']['conf']['databases'] = 16
+default['redis']['conf']['dir'] = '/usr/local/var/db/redis/' # The working directory
+default['redis']['conf']['dbfilename'] = 'dump.rdb'
+default['redis']['conf']['rdbchecksum'] = 'yes'
+default['redis']['conf']['rdbcompression'] = 'yes'
+default['redis']['conf']['stop-writes-on-bgsave-error'] = 'yes'
+default['redis']['conf']['tcp-keepalive'] = 0
+default['redis']['conf']['pidfile'] = '/usr/local/var/run/redis.pid'
