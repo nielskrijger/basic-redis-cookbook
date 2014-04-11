@@ -9,6 +9,7 @@ default['redis']['version'] = '2.8.8'
 default['redis']['url'] = "http://download.redis.io/releases/redis-#{node['redis']['version']}.tar.gz"
 
 default['redis']['conf']['port'] = 6379
+default['redis']['conf']['bind'] = nil # Set nil to listen to all interfaces
 default['redis']['conf']['timeout'] = 0 # Close the connection after a client is idle for N seconds (0 to disable)
 default['redis']['conf']['loglevel'] = 'notice' # Either verbose, debug, notice or warning
 default['redis']['conf']['logfile'] = '/var/log/redis/redis-server.log'
