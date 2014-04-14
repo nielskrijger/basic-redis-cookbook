@@ -22,28 +22,17 @@ end
 # Create directories
 #
 
-directory node['redis']['conf_dir'] do
-  action :create
-  recursive true
-  owner node['redis']['user']
-  group node['redis']['group']
-  mode '0755'
-end
-
-directory File.dirname(node['redis']['conf']['logfile']) do
-  action :create
-  recursive true
-  owner node['redis']['user']
-  group node['redis']['group']
-  mode '0755'
-end
-
-directory node['redis']['conf']['dir'] do
-  action :create
-  recursive true
-  owner node['redis']['user']
-  group node['redis']['group']
-  mode '0755'
+directories = [node['redis']['conf_dir'],
+               File.dirname(node['redis']['conf']['logfile']),
+               node['redis']['conf']['dir']]
+directories.each do |dir|
+  directory dir do
+    action :create
+    recursive true
+    owner node['redis']['user']
+    group node['redis']['group']
+    mode '0755'
+  end
 end
 
 file node['redis']['conf']['logfile'] do

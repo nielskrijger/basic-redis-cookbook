@@ -11,5 +11,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[basic-redis::default]
+      - recipe[redis::default]
     attributes:
